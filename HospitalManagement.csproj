@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{67A4095F-76DF-4516-BBC8-DDAC5DDA6CBD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HospitalManagement</RootNamespace>
+    <AssemblyName>HospitalManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IronOcr, Version=4.4.0.21181, Culture=neutral, PublicKeyToken=5f366048dc436899, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\IronOcr.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Billing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing.Designer.cs">
+      <DependentUpon>Billing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="eHospitalDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>eHospitalDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeRegister.Designer.cs">
+      <DependentUpon>EmployeeRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LabQueue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LabQueue.Designer.cs">
+      <DependentUpon>LabQueue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientAppointment.Designer.cs">
+      <DependentUpon>PatientAppointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientDocumentAssign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientDocumentAssign.Designer.cs">
+      <DependentUpon>PatientDocumentAssign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientInvoice.Designer.cs">
+      <DependentUpon>PatientInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientLabTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientLabTest.Designer.cs">
+      <DependentUpon>PatientLabTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientQueue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientQueue.Designer.cs">
+      <DependentUpon>PatientQueue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientRecord.Designer.cs">
+      <DependentUpon>PatientRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientRegistration.Designer.cs">
+      <DependentUpon>PatientRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientSearch.Designer.cs">
+      <DependentUpon>PatientSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientSurgicalProcedure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientSurgicalProcedure.Designer.cs">
+      <DependentUpon>PatientSurgicalProcedure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SupportingClasses\DataFactory.cs" />
+    <Compile Include="SupportingClasses\Handler.cs" />
+    <Compile Include="SupportingClasses\UserSession.cs" />
+    <EmbeddedResource Include="Billing.resx">
+      <DependentUpon>Billing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeRegister.resx">
+      <DependentUpon>EmployeeRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LabQueue.resx">
+      <DependentUpon>LabQueue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientAppointment.resx">
+      <DependentUpon>PatientAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientDocumentAssign.resx">
+      <DependentUpon>PatientDocumentAssign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientInvoice.resx">
+      <DependentUpon>PatientInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientLabTest.resx">
+      <DependentUpon>PatientLabTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientQueue.resx">
+      <DependentUpon>PatientQueue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientRecord.resx">
+      <DependentUpon>PatientRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientRegistration.resx">
+      <DependentUpon>PatientRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientSearch.resx">
+      <DependentUpon>PatientSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientSurgicalProcedure.resx">
+      <DependentUpon>PatientSurgicalProcedure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="eHospitalDBDataSet.xsc">
+      <DependentUpon>eHospitalDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="eHospitalDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>eHospitalDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="eHospitalDBDataSet.xss">
+      <DependentUpon>eHospitalDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kissclipart-cyber-security-lock-png-clipart-computer-security-e5885498dc62118e.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\Appointment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\patientQueue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\PatientRegistration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\PatientSearch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\Bills.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\LabQueue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\Reports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\ScanCard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\tabsNew\PatientRegistration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\tabsNew\Appointment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\tabsNew\Bills.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\tabsNew\LabQueue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\tabsNew\MonitoringInterval.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\tabsNew\patientQueue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\tabsNew\PatientSearch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\tabsNew\ScanCard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconsNew\first-aid-kit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconsNew\hospital %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_employee - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\PatientVisit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparency %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparency.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparency %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparency %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\ImageBrowse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\booking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Noimage.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Assign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Assign1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Attach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
